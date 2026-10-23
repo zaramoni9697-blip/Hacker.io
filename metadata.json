@@ -1,0 +1,6 @@
+{
+  "name": "WiFi Sec Analyzer",
+  "description": "Educational wireless security scanner, 802.11 protocol frame inspector, and vulnerability knowledge base.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
