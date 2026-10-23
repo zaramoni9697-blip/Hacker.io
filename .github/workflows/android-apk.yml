@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -25,16 +26,16 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.13'
 
       - name: Build Debug APK
-        run: |
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: my-ai-chatchat-apk
-          path: "**/build/outputs/apk/debug/*.apk"
+          name: Haking-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
           retention-days: 7
